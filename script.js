@@ -1,95 +1,93 @@
 // Initialize Lucide Icons
 lucide.createIcons();
 
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // --- Navigation Sticky Effect ---
-    const navbar = document.getElementById('navbar');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
+// --- Theme Toggle ---
+const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
+const body = document.body;
+
+// Check local storage for theme
+const savedTheme = localStorage.getItem('portfolio-theme');
+if (savedTheme === 'light') {
+    body.classList.remove('dark-mode');
+    body.classList.add('light-mode');
+}
+
+themeToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+        
+        if (body.classList.contains('light-mode')) {
+            localStorage.setItem('portfolio-theme', 'light');
         } else {
-            navbar.classList.remove('scrolled');
+            localStorage.setItem('portfolio-theme', 'dark');
         }
     });
+});
 
-    // --- Mobile Menu Toggle ---
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const closeMenuBtn = document.getElementById('closeMenuBtn');
-    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
+// --- Scroll Progress Bar ---
+const progressBar = document.querySelector('.progress-bar');
+const progressBarGlow = document.querySelector('.progress-bar-glow');
 
-    function toggleMenu() {
-        mobileMenuOverlay.classList.toggle('active');
-        document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
-    }
-
-    mobileMenuBtn.addEventListener('click', toggleMenu);
-    closeMenuBtn.addEventListener('click', toggleMenu);
-
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', toggleMenu);
-    });
-
-    // --- Theme Toggle ---
-    const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
+window.addEventListener('scroll', () => {
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / windowHeight) * 100;
     
-    // Check saved theme or system preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        document.body.classList.add('light-mode');
-    }
+    if (progressBar) progressBar.style.width = scrolled + '%';
+    if (progressBarGlow) progressBarGlow.style.width = scrolled + '%';
     
-    themeToggleBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-            const isLight = document.body.classList.contains('light-mode');
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
-        });
+    // Header Blur Effect
+    const header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.style.background = 'rgba(var(--bg-base), 0.85)';
+        header.style.backdropFilter = 'blur(16px)';
+        header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+    } else {
+        header.style.background = 'rgba(var(--bg-base), 0.7)';
+        header.style.backdropFilter = 'blur(12px)';
+        header.style.boxShadow = 'none';
+    }
+});
+
+// --- Fade Up Animations ---
+const fadeElements = document.querySelectorAll('.pipeline-card, .proj-card, .timeline-item, .cert-box, .about-card, .skill-group');
+
+const fadeObserverOptions = {
+    root: null,
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+};
+
+const fadeObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Add visible class
+            entry.target.classList.add('visible');
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+        }
     });
+}, fadeObserverOptions);
 
-    // --- Intersection Observer for Fade-Up Animations ---
-    const fadeUpElements = document.querySelectorAll('.fade-up');
+// Initial state for fade elements
+fadeElements.forEach((el, index) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = `all 0.6s ease ${index * 0.1}s`;
+    fadeObserver.observe(el);
+});
 
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.15
-    };
+// --- Custom Cursor ---
+const cursor = document.querySelector('.custom-cursor');
+const cursorGlow = document.querySelector('.cursor-glow');
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                // Optional: Stop observing once visible if you want it to trigger only once
-                // observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    fadeUpElements.forEach(el => {
-        observer.observe(el);
-    });
-
-    // --- Smooth Scrolling for Anchor Links ---
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                // Offset for fixed navbar
-                const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+document.addEventListener('mousemove', (e) => {
+    if (cursor) {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    }
+    if (cursorGlow) {
+        cursorGlow.style.left = e.clientX + 'px';
+        cursorGlow.style.top = e.clientY + 'px';
+    }
 });

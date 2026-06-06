@@ -3,243 +3,331 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smit Shah | Data Science & AI Professional</title>
-    <meta name="description" content="Portfolio of Smit Shah, Data Science student and AI professional with expertise in Machine Learning, NLP, and Deep Learning.">
+    <title>Smit Shah — Data Scientist | Mumbai</title>
+    <meta name="description" content="Portfolio of Smit Shah — Data Science & AI Professional.">
     
-    <!-- Google Fonts: Inter and Outfit -->
+    <!-- Premium Fonts: Space Grotesk and Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Background Effects -->
-    <div class="bg-effects">
-        <div class="glow-orb orb-1"></div>
-        <div class="glow-orb orb-2"></div>
-        <div class="glow-orb orb-3"></div>
-    </div>
+<body class="dark-mode">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-glow"></div>
+
+    <!-- Top Progress Bar -->
+    <div aria-hidden="true" class="progress-bar-glow"></div>
+    <div aria-hidden="true" class="progress-bar"></div>
 
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-content container">
-            <a href="#" class="logo">
-                <img src="70272400003_SmitShah.jpg" alt="Smit Shah" class="nav-profile-pic">
-                Smit<span>Shah</span>
-            </a>
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="#top" class="logo">Smit Shah</a>
             
-            <!-- Mobile Menu Button -->
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i data-lucide="menu"></i>
-            </button>
-
-            <!-- Desktop Links -->
             <ul class="nav-links">
-                <li>
-                    <button class="theme-toggle-btn" aria-label="Toggle Theme">
-                        <i data-lucide="sun" class="sun-icon"></i>
-                        <i data-lucide="moon" class="moon-icon"></i>
-                    </button>
-                </li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-        <button class="close-menu-btn" id="closeMenuBtn">
-            <i data-lucide="x"></i>
-        </button>
-        <ul class="mobile-nav-links">
-            <li>
-                <button class="theme-toggle-btn" aria-label="Toggle Theme" style="margin: 0 auto;">
-                    <i data-lucide="sun" class="sun-icon"></i>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" aria-label="Toggle Theme">
                     <i data-lucide="moon" class="moon-icon"></i>
+                    <i data-lucide="sun" class="sun-icon"></i>
                 </button>
-            </li>
-            <li><a href="#about" class="mobile-link">About</a></li>
-            <li><a href="#skills" class="mobile-link">Skills</a></li>
-            <li><a href="#experience" class="mobile-link">Experience</a></li>
-            <li><a href="#projects" class="mobile-link">Projects</a></li>
-            <li><a href="#contact" class="mobile-link">Contact</a></li>
-        </ul>
-    </div>
+                <div class="resume-actions">
+                    <a href="Smit_Shah_Resume.pdf" target="_blank" class="btn-outline">View Resume</a>
+                    <a href="Smit_Shah_Resume.pdf" download class="btn-outline">
+                        <i data-lucide="download"></i> Download
+                    </a>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Open menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <div class="container hero-container">
-                <div class="hero-content fade-up">
-                    <div class="greeting">
-                        <span class="badge">Open to Opportunities</span>
+        <section id="top" class="hero-section">
+            <div class="hero-wrapper">
+                <div class="hero-card">
+                    <!-- Subtle dotted background inside the card -->
+                    <div class="hero-bg-dots"></div>
+                    <div class="hero-glow-blob"></div>
+
+                    <div class="hero-content">
+                        <div class="status-pill">
+                            <i data-lucide="map-pin"></i> Open for all locations · Full-time roles
+                        </div>
+                        <h1 class="hero-title">
+                            Hi, I'm <span class="text-primary">Smit Shah</span>
+                            <span class="hero-subtitle">I'm a <span class="typewriter-text text-primary">Data Scientist</span></span>
+                        </h1>
+                        <div class="hero-desc">
+                            <p class="desc-main">Passionate about crafting data-driven insights and deploying scalable AI solutions. I specialize in:</p>
+                            <div class="desc-list">
+                                <div><strong class="text-foreground">Machine Learning & Deep Learning</strong></div>
+                                <div><strong class="text-foreground">Generative AI & Agentic Systems</strong></div>
+                                <div><strong class="text-foreground">Predictive Analytics & NLP</strong></div>
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn-primary">View My Work <i data-lucide="arrow-right"></i></a>
+                            <a href="#contact" class="btn-secondary">Let's Connect</a>
+                        </div>
                     </div>
-                    <h1 class="hero-title">Hi, I'm <span class="highlight">Smit Shah</span></h1>
-                    <h2 class="hero-subtitle">Data Science & AI Professional</h2>
-                    <p class="hero-desc">
-                        Passionate about crafting data-driven insights and deploying scalable AI solutions. I specialize in Machine Learning, Generative AI, and Predictive Analytics.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="Smit_Shah_Resume.pdf" target="_blank" class="btn btn-secondary">
-                            <i data-lucide="download"></i> Download Resume
-                        </a>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/smit-shah6502/" target="_blank" aria-label="LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        </a>
-                        <a href="https://github.com/SmitShah-6502" target="_blank" aria-label="GitHub">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                        </a>
-                        <a href="mailto:smitshah6502@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
-                    </div>
-                </div>
-                <div class="hero-visual fade-up delay-1">
-                    <div class="avatar-container">
-                        <div class="avatar-ring"></div>
-                        <img src="assets/smit_avatar.png" alt="Smit Shah AI Avatar" class="avatar-img">
-                        <div class="floating-badges">
-                            <div class="float-badge fb-1"><i data-lucide="database"></i> Data Analysis</div>
-                            <div class="float-badge fb-2"><i data-lucide="bot"></i> Generative AI</div>
-                            <div class="float-badge fb-3"><i data-lucide="line-chart"></i> Predictive Models</div>
-                            <div class="float-badge fb-4"><i data-lucide="brain"></i> Machine Learning</div>
+
+                    <div class="hero-visual">
+                        <div class="visual-bg-grid"></div>
+                        <div class="visual-image-wrapper">
+                            <img src="70272400003_SmitShah.jpg" alt="Smit Shah" class="profile-pic">
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="scroll-indicator">
-                <p>Scroll Down</p>
-                <i data-lucide="arrow-down"></i>
             </div>
         </section>
 
-        <!-- Summary / About Section -->
-        <section class="about section" id="about">
-            <div class="container">
-                <h2 class="section-title fade-up">Professional <span class="highlight">Summary</span></h2>
-                <div class="about-grid">
-                    <div class="about-card glass-card fade-up">
-                        <div class="about-icon"><i data-lucide="graduation-cap"></i></div>
-                        <h3>Education</h3>
-                        <div class="edu-item">
-                            <h4>Masters in Data Science & Business Analytics</h4>
-                            <p>NMIMS, Mumbai (2024-2026)</p>
-                            <span class="cgpa">CGPA: 9.39/10</span>
+        <!-- About Section (Replaced old format) -->
+        <section id="about" class="about-section">
+            <div class="section-wrapper">
+                <div class="about-card glow-card shadow-heavy">
+                    <div class="about-image-grid animated-grid">
+                        <div class="about-img-box img-scale"><img src="smit-photo1.jpeg" alt="Smit Avatar" class="about-img"></div>
+                        <div class="about-img-box img-scale float-delay-1"><img src="assets/img1.png" alt="Data Visualization AI" class="about-img"></div>
+                        <div class="about-img-box img-scale float-delay-2"><img src="assets/img2.png" alt="AI Neural Network" class="about-img"></div>
+                        <div class="about-img-box img-scale float-delay-3"><img src="assets/img3.png" alt="Machine Learning Grid" class="about-img"></div>
+                    </div>
+                    <div class="about-content">
+                        <h2 class="section-title">About me</h2>
+                        <div class="badges-row">
+                            <span class="badge badge-red"><i data-lucide="graduation-cap"></i> NMIMS '26</span>
+                            <span class="badge badge-green"><i data-lucide="trophy"></i> Data Scientist</span>
+                            <span class="badge badge-blue"><i data-lucide="code"></i> Coding Enthusiast</span>
                         </div>
-                        <div class="edu-item">
-                            <h4>Bachelors in Computer Engineering</h4>
-                            <p>Gujarat Technological University (2020-2024)</p>
-                            <span class="cgpa">CGPA: 8.99/10</span>
+                        <div class="about-text">
+                            <p>I'm a Data Science student from Mumbai pursuing my <strong class="text-foreground">Masters in Data Science & Business Analytics</strong> at NMIMS (CGPA: 9.39/10). I hold a Bachelors in Computer Engineering from GTU.</p>
+                            <p>I have practical expertise in developing enterprise-grade solutions using <strong class="text-foreground">Generative AI, LLMs, and RAG</strong> during my time at LTIMindtree, and building robust backends at Jainam Broking Limited.</p>
+                            <p>Beyond the screen, I love designing dashboards, participating in large-scale hackathons, and fostering academic engagement. I believe that powerful models only matter if they can drive real-world decision-making.</p>
                         </div>
                     </div>
-                    <div class="about-card glass-card fade-up delay-1">
-                        <div class="about-icon"><i data-lucide="brain-circuit"></i></div>
-                        <h3>Who I Am</h3>
-                        <p>Data Science student with practical expertise in Data Analysis, Machine Learning, Natural Language Processing (NLP), Regression Analysis, Time Series, and Deep Learning (CNN, LSTM, GRU).</p>
-                        <p>Experienced in designing dashboards, predictive analytics, data visualization, and optimizing forecasting models. Demonstrated leadership by orchestrating large-scale hackathons and fostering academic engagement.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pipeline Section -->
+        <section id="pipeline" class="pipeline-section">
+            <div class="section-wrapper">
+                <div class="section-header text-center">
+                    <h2 class="section-title">My Pipeline. For Everything.</h2>
+                    <p class="section-subtitle">A structured, iterative approach to turning raw data into scalable AI systems.</p>
+                </div>
+                
+                <div class="pipeline-grid">
+                    <!-- Line connecting cards on desktop -->
+                    <svg class="pipeline-line" preserveAspectRatio="none" viewBox="0 0 100 100">
+                        <line x1="16.6" y1="50" x2="83.3" y2="50"></line>
+                    </svg>
+
+                    <div class="pipeline-card pc-1">
+                        <div class="pc-header">
+                            <span class="step-num">01</span>
+                            <div class="pc-icon-box"><i data-lucide="search"></i></div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Understand the Objective</h3>
+                            <div class="pc-reveal">
+                                <p>Before touching code, I define the business problem. A perfect model answering the wrong question is useless.</p>
+                            </div>
+                        </div>
+                        <div class="pc-footer">// Define success first.</div>
+                    </div>
+
+                    <div class="pipeline-card pc-2">
+                        <div class="pc-header">
+                            <span class="step-num">02</span>
+                            <div class="pc-icon-box"><i data-lucide="database-zap"></i></div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Data Architecture</h3>
+                            <div class="pc-reveal">
+                                <p>Extensive EDA, cleaning, and feature engineering. Exploring every anomaly to ensure the foundation is rock solid.</p>
+                            </div>
+                        </div>
+                        <div class="pc-footer">// Garbage in, garbage out.</div>
+                    </div>
+
+                    <div class="pipeline-card pc-3 fade-up">
+                        <div class="pc-header">
+                            <span class="step-num">03</span>
+                            <div class="pc-icon-box"><i data-lucide="cpu"></i></div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Model & Iterate</h3>
+                            <div class="pc-reveal">
+                                <p>From baseline regressors to complex LLMs. I benchmark, cross-validate, and iterate until the metrics align with reality.</p>
+                            </div>
+                        </div>
+                        <div class="pc-footer">// Evidence over intuition.</div>
+                    </div>
+
+                    <div class="pipeline-card pc-4 fade-up">
+                        <div class="pc-header">
+                            <span class="step-num">04</span>
+                            <div class="pc-icon-box"><i data-lucide="sliders-horizontal"></i></div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Evaluate & Tune</h3>
+                            <div class="pc-reveal">
+                                <p>Rigorous hyperparameter tuning and performance evaluation to ensure models generalize well to unseen data without overfitting.</p>
+                            </div>
+                        </div>
+                        <div class="pc-footer">// Precision and Recall.</div>
+                    </div>
+
+                    <div class="pipeline-card pc-5 fade-up">
+                        <div class="pc-header">
+                            <span class="step-num">05</span>
+                            <div class="pc-icon-box"><i data-lucide="rocket"></i></div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Deploy & Scale</h3>
+                            <div class="pc-reveal">
+                                <p>Containerizing applications with Docker and deploying robust REST APIs to AWS/Cloud infrastructure for enterprise scale.</p>
+                            </div>
+                        </div>
+                        <div class="pc-footer">// From local to global.</div>
+                    </div>
+
+                    <div class="pipeline-card pc-6 fade-up">
+                        <div class="pc-header">
+                            <span class="step-num">06</span>
+                            <div class="pc-icon-box"><i data-lucide="activity"></i></div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Monitor & Refine</h3>
+                            <div class="pc-reveal">
+                                <p>Setting up MLOps pipelines to monitor data drift and model degradation, ensuring continuous learning and peak performance.</p>
+                            </div>
+                        </div>
+                        <div class="pc-footer">// Continuous intelligence.</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section class="skills section" id="skills">
-            <div class="container">
-                <h2 class="section-title text-center fade-up">Technical <span class="highlight">Arsenal</span></h2>
-                
-                <div class="skills-container">
-                    <div class="skill-category fade-up">
-                        <h3 class="category-title"><i data-lucide="code-2"></i> Languages & Frameworks</h3>
-                        <div class="skill-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">HTML/CSS</span>
-                            <span class="tag">Django</span>
-                            <span class="tag">Streamlit</span>
+        <section id="skills" class="skills-section">
+            <div class="section-wrapper">
+                <div class="section-header">
+                    <div class="kicker">Skills & Stack</div>
+                    <h2 class="section-title">The tools behind the <span class="text-primary">craft</span>.</h2>
+                    <p class="section-subtitle">My technical arsenal for building robust data pipelines and AI applications.</p>
+                </div>
+
+                <div class="skills-grid-container">
+                    <div class="skill-group">
+                        <div class="group-title">
+                            <span class="dot dot-primary"></span> Languages & Tools <div class="line"></div>
+                        </div>
+                        <div class="skill-pills">
+                            <div class="skill-pill"><i data-lucide="code-2"></i> Python</div>
+                            <div class="skill-pill"><i data-lucide="database"></i> SQL</div>
+                            <div class="skill-pill"><i data-lucide="file-code"></i> JavaScript</div>
+                            <div class="skill-pill"><i data-lucide="file-json"></i> HTML/CSS</div>
+                            <div class="skill-pill"><i data-lucide="git-branch"></i> Git</div>
+                            <div class="skill-pill"><i data-lucide="container"></i> Docker</div>
+                            <div class="skill-pill"><i data-lucide="cloud"></i> AWS</div>
                         </div>
                     </div>
 
-                    <div class="skill-category fade-up delay-1">
-                        <h3 class="category-title"><i data-lucide="network"></i> AI & Data Science</h3>
-                        <div class="skill-tags">
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">Deep Learning (CNN, LSTM, GRU)</span>
-                            <span class="tag">NLP</span>
-                            <span class="tag">Generative AI (LLMs, RAG)</span>
-                            <span class="tag">Pandas / NumPy</span>
-                            <span class="tag">Scikit-learn / TensorFlow / Keras</span>
-                            <span class="tag">Matplotlib / Seaborn</span>
+                    <div class="skill-group">
+                        <div class="group-title">
+                            <span class="dot dot-amber"></span> AI & Frameworks <div class="line"></div>
                         </div>
-                    </div>
-
-                    <div class="skill-category fade-up delay-2">
-                        <h3 class="category-title"><i data-lucide="wrench"></i> Tools & Tech</h3>
-                        <div class="skill-tags">
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">AWS</span>
-                            <span class="tag">PowerBI / MS Excel</span>
-                            <span class="tag">Git</span>
-                            <span class="tag">OpenAI / FAISS / LoRA / PEFT</span>
+                        <div class="skill-pills amber">
+                            <div class="skill-pill"><i data-lucide="brain"></i> Machine Learning</div>
+                            <div class="skill-pill"><i data-lucide="layers"></i> Deep Learning</div>
+                            <div class="skill-pill"><i data-lucide="message-square"></i> NLP & LLMs</div>
+                            <div class="skill-pill"><i data-lucide="bot"></i> Generative AI & RAG</div>
+                            <div class="skill-pill"><i data-lucide="server"></i> Django</div>
+                            <div class="skill-pill"><i data-lucide="layout-dashboard"></i> Streamlit</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section class="experience section" id="experience">
-            <div class="container">
-                <h2 class="section-title fade-up">Work <span class="highlight">Experience</span></h2>
-                
-                <div class="timeline">
-                    <!-- Job 1 -->
-                    <div class="timeline-item fade-up">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3 class="job-title">GenAI Intern</h3>
-                                    <h4 class="company">LTIMindtree</h4>
+        <!-- Experience & Education Section -->
+        <section id="experience" class="exp-section">
+            <div class="section-wrapper">
+                <div class="section-header">
+                    <h2 class="section-title">Work & <span class="text-primary">Education</span></h2>
+                </div>
+
+                <div class="exp-grid">
+                    <div class="exp-column">
+                        <h3 class="col-title">Experience</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="tl-dot"></div>
+                                <div class="tl-content">
+                                    <div class="tl-header">
+                                        <h4>GenAI Intern</h4>
+                                        <span class="date">Feb 2026 – May 2026</span>
+                                    </div>
+                                    <h5 class="company">LTIMindtree</h5>
+                                    <p>Developed enterprise-grade GenAI solutions, implemented vector databases (FAISS), and fine-tuned models (LoRA/PEFT). Built assistants for finance use cases.</p>
                                 </div>
-                                <span class="date-badge">Feb 2026 – May 2026</span>
                             </div>
-                            <ul class="job-duties">
-                                <li>Developing enterprise-grade Generative AI solutions using LLMs, RAG, and Agentic AI.</li>
-                                <li>Building AI assistants for finance and business intelligence use cases.</li>
-                                <li>Implementing vector databases (FAISS), prompt engineering, and fine-tuning (LoRA/PEFT).</li>
-                                <li>Deploying scalable applications using Streamlit, Docker, and AWS.</li>
-                            </ul>
+                            <div class="timeline-item">
+                                <div class="tl-dot"></div>
+                                <div class="tl-content">
+                                    <div class="tl-header">
+                                        <h4>Software Developer Intern</h4>
+                                        <span class="date">Jan 2024 – Jun 2024</span>
+                                    </div>
+                                    <h5 class="company">Jainam Broking Limited</h5>
+                                    <p>Developed backend strategies for a fintech platform using Python/Django. Designed APIs and scalable data pipelines with MySQL and MongoDB.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Job 2 -->
-                    <div class="timeline-item fade-up">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3 class="job-title">Software Developer Intern</h3>
-                                    <h4 class="company">Jainam Broking Limited</h4>
+                    <div class="exp-column">
+                        <h3 class="col-title">Education</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="tl-dot"></div>
+                                <div class="tl-content">
+                                    <div class="tl-header">
+                                        <h4>Masters in Data Science & Business Analytics</h4>
+                                        <span class="date">2024 – 2026</span>
+                                    </div>
+                                    <h5 class="company">NMIMS, Mumbai</h5>
+                                    <p>CGPA: 9.39/10</p>
                                 </div>
-                                <span class="date-badge">Jan 2024 – Jun 2024</span>
                             </div>
-                            <ul class="job-duties">
-                                <li>Developed Backend strategies for a fintech platform using Python and Django, focusing on performance optimization and scalability.</li>
-                                <li>Designed and implemented APIs, data pipelines, and database solutions using MySQL and MongoDB to improve data processing efficiency.</li>
-                                <li><b>Tools:</b> Python, Django, MySQL, MongoDB, Git.</li>
-                            </ul>
+                            <div class="timeline-item">
+                                <div class="tl-dot"></div>
+                                <div class="tl-content">
+                                    <div class="tl-header">
+                                        <h4>Bachelors in Computer Engineering</h4>
+                                        <span class="date">2020 – 2024</span>
+                                    </div>
+                                    <h5 class="company">Gujarat Technological University</h5>
+                                    <p>CGPA: 8.99/10</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -247,153 +335,109 @@
         </section>
 
         <!-- Projects Section -->
-        <section class="projects section" id="projects">
-            <div class="container">
-                <h2 class="section-title text-center fade-up">Featured <span class="highlight">Projects</span></h2>
+        <section id="projects" class="projects-section">
+            <div class="section-wrapper">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Featured <span class="text-primary">Projects</span></h2>
+                </div>
                 
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card glass-card fade-up">
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>Flight Price Prediction</h3>
-                                <span class="year">2025</span>
-                            </div>
-                            <p class="project-desc">Web application using Streamlit and Random Forest Regressor to estimate airfares based on dynamic inputs. Features comprehensive data preprocessing and a responsive UI.</p>
-                            <div class="project-tags">
-                                <span>Python</span><span>Streamlit</span><span>Scikit-learn</span><span>Pandas</span>
-                            </div>
+                <div class="projects-grid-modern">
+                    <div class="proj-card fade-up">
+                        <div class="proj-year">2025</div>
+                        <h3>AI Product Recommender</h3>
+                        <p>Multimodal retail recommendation system using LLMs and RAG. Supports voice/text search and multilingual chat.</p>
+                        <div class="proj-tags">
+                            <span>LLMs</span><span>RAG</span><span>NLP</span>
                         </div>
                     </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card glass-card fade-up delay-1">
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>Mutual Fund Portfolio Recommendation</h3>
-                                <span class="year">2025</span>
-                            </div>
-                            <p class="project-desc">Scalable recommendation web app enabling return-based fund filtering. Containerized with Docker and deployed on AWS EC2 for high availability.</p>
-                            <div class="project-tags">
-                                <span>Python</span><span>Flask</span><span>Docker</span><span>AWS EC2</span>
-                            </div>
+                    <div class="proj-card fade-up">
+                        <div class="proj-year">2025</div>
+                        <h3>FinWise: Smart Assistant</h3>
+                        <p>AI-powered assistant providing contextual stock insights and investment strategies. Integrates real-time data.</p>
+                        <div class="proj-tags">
+                            <span>Python</span><span>LLMs</span><span>ChatGroq</span>
                         </div>
                     </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-card glass-card fade-up">
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>AI-Based Product Recommender</h3>
-                                <span class="year">2025</span>
-                            </div>
-                            <p class="project-desc">Multimodal recommendation system for retail using LLMs, RAG, and NLP. Includes voice/text search, multilingual chat, and dynamic Streamlit UI simulating agentic behavior.</p>
-                            <div class="project-tags">
-                                <span>LLMs</span><span>RAG</span><span>NLP</span><span>Computer Vision</span>
-                            </div>
+                    <div class="proj-card fade-up">
+                        <div class="proj-year">2024</div>
+                        <h3>Flight Price Prediction</h3>
+                        <p>Streamlit web app using Random Forest to estimate airfares based on dynamic inputs. Features deep data preprocessing.</p>
+                        <div class="proj-tags">
+                            <span>Python</span><span>Streamlit</span><span>Scikit-learn</span>
                         </div>
                     </div>
-
-                    <!-- Project 4 -->
-                    <div class="project-card glass-card fade-up delay-1">
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>FinWise: Smart Finance Assistant</h3>
-                                <span class="year">2025</span>
-                            </div>
-                            <p class="project-desc">AI-powered assistant providing contextual stock insights and investment strategies. Integrates real-time financial data with multilingual and voice-enabled interactions.</p>
-                            <div class="project-tags">
-                                <span>Python</span><span>ChatGroq</span><span>LLMs</span><span>Machine Learning</span>
-                            </div>
+                    <div class="proj-card fade-up">
+                        <div class="proj-year">2024</div>
+                        <h3>Mutual Fund Recommender</h3>
+                        <p>Scalable web app enabling return-based fund filtering. Containerized via Docker and deployed on AWS EC2.</p>
+                        <div class="proj-tags">
+                            <span>Python</span><span>Docker</span><span>AWS</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Certifications & Workshops Section -->
-        <section class="certifications section" id="contact">
-            <div class="container">
-                <div class="cert-workshop-grid">
-                    <div class="cert-col fade-up">
-                        <h2 class="section-title">Certifications</h2>
-                        <ul class="cert-list">
-                            <li>
-                                <i data-lucide="award" class="accent-icon"></i>
-                                <div>
-                                    <strong>Data Analytics Job Simulation</strong>
-                                    <span>Deloitte (2025)</span>
-                                </div>
-                            </li>
-                            <li>
-                                <i data-lucide="award" class="accent-icon"></i>
-                                <div>
-                                    <strong>Generative AI for beginner</strong>
-                                    <span>Great Learning (2025)</span>
-                                </div>
-                            </li>
-                            <li>
-                                <i data-lucide="award" class="accent-icon"></i>
-                                <div>
-                                    <strong>Applied Data Science with Python</strong>
-                                    <span>Simplilearn (2025)</span>
-                                </div>
-                            </li>
+        <!-- Certifications -->
+        <section id="contact" class="certs-section">
+            <div class="section-wrapper">
+                <div class="cert-grid">
+                    <div class="cert-box">
+                        <h3>Certifications</h3>
+                        <ul>
+                            <li><i data-lucide="award"></i> <span>Deloitte (2025) - Data Analytics Job Sim</span></li>
+                            <li><i data-lucide="award"></i> <span>Great Learning (2025) - Generative AI</span></li>
+                            <li><i data-lucide="award"></i> <span>Simplilearn (2025) - Applied Data Science</span></li>
                         </ul>
                     </div>
-
-                    <div class="workshop-col fade-up delay-1">
-                        <h2 class="section-title">Workshops Conducted</h2>
-                        <ul class="cert-list">
-                            <li>
-                                <i data-lucide="presentation" class="accent-icon"></i>
-                                <div>
-                                    <strong>Power BI & Machine Learning</strong>
-                                    <span>CKPCET, Surat (2025)</span>
-                                </div>
-                            </li>
-                            <li>
-                                <i data-lucide="presentation" class="accent-icon"></i>
-                                <div>
-                                    <strong>Practical ML & Power BI Apps</strong>
-                                    <span>NMIMS, Mumbai (2025)</span>
-                                </div>
-                            </li>
-                            <li>
-                                <i data-lucide="presentation" class="accent-icon"></i>
-                                <div>
-                                    <strong>Data Analytics & Visualization</strong>
-                                    <span>SCET, Surat (2025)</span>
-                                </div>
-                            </li>
+                    <div class="cert-box">
+                        <h3>Workshops Conducted</h3>
+                        <ul>
+                            <li><i data-lucide="presentation"></i> <span>CKPCET (2025) - Power BI & ML</span></li>
+                            <li><i data-lucide="presentation"></i> <span>NMIMS (2025) - Practical ML & Power BI</span></li>
+                            <li><i data-lucide="presentation"></i> <span>SCET (2025) - Data Analytics & Viz</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#" class="logo">Smit<span>Shah</span></a>
-                    <p>Building intelligent systems and data-driven solutions.</p>
+    <!-- Let's Get In Touch / Footer Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-wrapper">
+            <div class="contact-main">
+                <div class="contact-info">
+                    <h2 class="contact-title">Let's get in touch</h2>
+                    <p class="contact-subtitle">Open to collaborations, speaking invitations, and conversations about AI, data science, and agentic systems.</p>
+                    <a href="mailto:smitshah6502@gmail.com" class="contact-email">smitshah6502@gmail.com</a>
+                    
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/smit-shah6502/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                        <a href="https://github.com/SmitShah-6502" target="_blank" class="social-icon" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="footer-contact">
-                    <h3>Contact Me</h3>
-                    <p><i data-lucide="phone"></i> +91-9328945721</p>
-                    <p><i data-lucide="mail"></i> <a href="mailto:smitshah6502@gmail.com">smitshah6502@gmail.com</a></p>
-                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary);"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg> <a href="https://www.linkedin.com/in/smit-shah6502/" target="_blank">LinkedIn</a></p>
-                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary);"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg> <a href="https://github.com/SmitShah-6502" target="_blank">GitHub</a></p>
+                
+                <div class="contact-action">
+                    <a href="mailto:smitshah6502@gmail.com" class="btn-glow">Contact me <i data-lucide="arrow-up-right"></i></a>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2026 Smit Shah. All rights reserved.</p>
+                <p>Smit Shah &copy; 2026</p>
+                <div class="footer-bottom-right">
+                    <p>Built with passion <i data-lucide="coffee"></i></p>
+                    <a href="#top" class="back-to-top" aria-label="Back to top">
+                        <i data-lucide="arrow-up"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
 
     <script src="script.js"></script>
 </body>
